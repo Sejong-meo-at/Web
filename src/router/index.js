@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import main from '@/components/main'
 import topBar from '@/components/topBar'
 import login from '@/components/login'
-
+import register from '@/components/register'
 Vue.use(Router)
 
 export default new Router({
@@ -11,6 +11,10 @@ export default new Router({
     {
       path: '/login',
       component: login
+    },
+    {
+      path: '/register',
+      component: register
     },
     {
       path: '/',

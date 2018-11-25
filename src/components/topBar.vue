@@ -2,8 +2,9 @@
   <div>
     <div>
       <router-view name="topBar"></router-view>
-      <!-- <div class = "bar">
-      </div> -->
+      <div class = "bar">
+        
+      </div>
     </div>
   </div>
 </template>
