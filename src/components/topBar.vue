@@ -3,7 +3,11 @@
     <div>
       <router-view name="topBar"></router-view>
       <div class = "bar">
-
+        <router-link to = '/login'>로그인</router-link>
+        <router-link to = '/register'>회원가입</router-link>
+        <router-link to = '/main'>게시판</router-link>
+        <router-link to = '/translation'>번역</router-link>
+        <router-link to = '/notice'>단어추가</router-link>
       </div>
     </div>
   </div>
@@ -26,5 +30,14 @@ export default {
   top : 14vh;
   height: 8.4vh;
   background: #F78181;
+  display: flex;
+}
+a {
+  color : #fff;
+  width:20vw;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5vh;
+  line-height: 8.4vh;
 }
 </style>

@@ -15,13 +15,13 @@
 // import Vue from 'vue'
 import axios from 'axios'
 // import XLSX from 'xlsx'
-
+import api from './apiurl.json'
 export default {
   name: 'register',
   methods: {
     async register () {
-      console.log(this.id + ' ' + this.pw)
-      let result = await axios.post('/', {
+      let url = api.url + '/signup'
+      let result = await axios.post(url, {
         id: this.id,
         passwd: this.pw,
         name: this.name
@@ -31,7 +31,7 @@ export default {
       })
       if(result.status == 200) {
         alert('환영합니다! 로그인 해주세요!')
-        location.replace('/login');
+        location.replace('#/login');
       }
     }
   }

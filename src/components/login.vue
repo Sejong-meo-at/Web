@@ -14,21 +14,22 @@
 // import Vue from 'vue'
 import axios from 'axios'
 // import XLSX from 'xlsx'
-
+import api from './apiurl.json'
 export default {
   name: 'login',
   methods: {
     async login () {
-      console.log(this.id + ' ' + this.pw)
-      let result = await axios.post('/', {
+      let url = api.url + '/signin'
+      let result = await axios.post(url, {
         id: this.id,
         passwd: this.pw
       }).catch((response)=>{
         alert('아이디나 비밀번호가 틀렸습니다!')
         // return 0;
       })
+      console.log(result)
       if(result.status == 200) {
-        location.replace('/main');
+        location.replace('#/main');
       }
     }
   }

@@ -23,7 +23,7 @@ export default new Router({
       component: topBar,
       children: [
         {
-          path: '/',
+          path: '/main',
           components: {
             topBar: main
           }
@@ -37,7 +37,7 @@ export default new Router({
         {
           path: '/notice',
           components: {
-            topbar: notice
+            topBar: notice
           }
         }
       ]

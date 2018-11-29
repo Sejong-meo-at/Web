@@ -11,7 +11,7 @@
       <div class = "afterBox">
         <p class = "text">표준어</p>
         <div class = "after">
-          <textarea v-model = "after"></textarea>
+          <textarea v-model = "after" readonly></textarea>
         </div>
       </div>
     </div>
@@ -23,17 +23,26 @@
 import axios from 'axios'
 // import XLSX from 'xlsx'
 // 게시판, 로그인, 회원가입, 번역
+import api from './apiurl.json'
+
 export default {
   name: 'trans',
+  data () {
+    return {
+      after : ""
+    }
+  },
   methods: {
     async trans () {
-      let result = await axios.post('/', {
-        index: this.before
+      let url = api.url + '/change'
+      let result = await axios.post(url, {
+        str: this.before
       }).catch((response)=>{
         alert('실패!')
       })
       if(result.status == 200) {
-        this.after = result.index;
+        this.after = result.data;
+        console.log(result.data)
       }
     }
   }
