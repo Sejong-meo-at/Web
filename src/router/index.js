@@ -4,6 +4,8 @@ import main from '@/components/main'
 import topBar from '@/components/topBar'
 import login from '@/components/login'
 import register from '@/components/register'
+import translation from '@/components/translation'
+import notice from '@/components/notice'
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +26,18 @@ export default new Router({
           path: '/',
           components: {
             topBar: main
+          }
+        },
+        {
+          path: '/translation',
+          components: {
+            topBar: translation
+          }
+        },
+        {
+          path: '/notice',
+          components: {
+            topbar: notice
           }
         }
       ]

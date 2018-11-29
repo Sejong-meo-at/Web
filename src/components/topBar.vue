@@ -3,7 +3,7 @@
     <div>
       <router-view name="topBar"></router-view>
       <div class = "bar">
-        
+
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
 // import Vue from 'vue'
 // import axios from 'axios'
 // import XLSX from 'xlsx'
-
+// 게시판, 로그인, 회원가입, 번역
 export default {
   name: 'topBar'
 }
@@ -23,7 +23,7 @@ export default {
 .bar {
   position: absolute;
   width: 100%;
-  top : 16vh;
+  top : 14vh;
   height: 8.4vh;
   background: #F78181;
 }
